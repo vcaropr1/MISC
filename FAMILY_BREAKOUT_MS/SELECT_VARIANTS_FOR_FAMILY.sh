@@ -40,4 +40,4 @@ $JAVA_1_7/java -jar $GATK_DIR/GenomeAnalysisTK.jar \
 -env \
 --sample_file $CORE_PATH/$PROJECT/Release_Data/rawdataset_to_PI/Family_Vcfs/$FAMILY/$FAMILY"_family_sample.list" \
 --variant $MULTI_SAMPLE_VCF \
--o $CORE_PATH/$PROJECT/Release_Data/rawdataset_to_PI/Family_Vcfs/$FAMILY/$PROJECT".VQSR.ANNOTATED.JUST_FAMILY_"$FAMILY"_VARIANT_ONLY.vcf"
+-o $CORE_PATH/$PROJECT/Release_Data/rawdataset_to_PI/Family_Vcfs/$FAMILY/$PROJECT"_"$FAMILY".vcf"

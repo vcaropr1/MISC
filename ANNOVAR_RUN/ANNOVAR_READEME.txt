@@ -1,0 +1,12 @@
+ANNOVAR RUN FOR MENDEL PROJECTS
+
+These scripts are used to run the post multi-sample calling annovar for any Mendel release.  
+
+The steps and way these scripts run are as followed:
+
+1.  ANNOVAR_SETUP.sh
+		This script takes in a samplesheet arguement and creates a ANNOVAR_TEMP directory under the TEMP directory for each project found in the samplesheet.  This directory is then filled with the FILTERED_ON_BAIT vcf files for the samples in each specific project.  
+2.  ANNOVAR_RUN.sh
+		This script takes in a project name arguement and runs annovar for that specific project.  This requires the ANNOVAR_TEMP directory to be generated from step 1 to work properly.  After annovar runs for the vcfs found in this directory it will then move the annovar reports and proper csv|txt files to the release directory.  
+
+		*The reason I did not automate this to run all in one call was the ability to run multiple annovar runs at once i.e. one on sunrhel 3, one on sunrhel 4 etc.
